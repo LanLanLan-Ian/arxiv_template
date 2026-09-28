@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{arxiv-style}
+\input{preamble}
+
+% Edit the title, authors, and affiliations for your manuscript.
+\newcommand{\PaperTitle}{Your Paper Title: A Clear and Concise Subtitle}
+\newcommand{\PaperAuthors}{First Author and Second Author}
+\title{\PaperTitle}
+\author[1]{First Author}
+\author[2]{Second Author}
+\affil[1]{Department, First University}
+\affil[2]{Department, Second University}
+\date{}
+
+% Optional email line. Use @ directly, without a backslash.
+% \affil[ ]{\texttt{first@example.com}, \texttt{second@example.com}}
+
+\hypersetup{pdftitle={\PaperTitle},pdfauthor={\PaperAuthors}}
+
+\begin{document}
+\pagestyle{plain}
+\maketitle
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\input{sections/introduction}
+\input{sections/method}
+\input{sections/experiments}
+\input{sections/conclusion}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\clearpage
+\appendix
+\input{sections/appendix}
+
+\end{document}

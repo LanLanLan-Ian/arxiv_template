@@ -1,0 +1,39 @@
+% Common tools. Add specialized packages here only when your paper needs them.
+\usepackage{graphicx}
+\usepackage[font=small]{caption}
+\usepackage{subcaption}
+\usepackage{booktabs,multirow,array,tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{xspace}
+
+% Hyperlinks are loaded after the other packages.
+\usepackage{url}
+\usepackage{hyperref}
+\definecolor{linkblue}{rgb}{0,0,0.5}
+\hypersetup{
+    colorlinks=true,
+    citecolor=linkblue,
+    linkcolor=linkblue,
+    urlcolor=linkblue
+}
+
+% Rename these paper-specific commands when reusing the project.
+\newcommand{\methodname}{\textsc{YourMethod}\xspace}
+% A distinct name avoids the existing \laplace command in math packages.
+\newcommand{\LaplaceDist}{\operatorname{Laplace}}
+\newcommand{\NormalDist}{\mathcal{N}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\lstdefinestyle{pythonstyle}{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    showstringspaces=false,
+    frame=single,
+    rulecolor=\color{black!20}
+}

@@ -1,0 +1,38 @@
+% SPDX-License-Identifier: Apache-2.0
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{arxiv-style}[2026/09/28 v1.1.0 Research preprint typography]
+
+% A spacious single-column layout on US Letter paper.
+\RequirePackage[
+    letterpaper,
+    left=1in,
+    right=0.7in,
+    top=1in,
+    bottom=1in,
+    marginparwidth=0.8in
+]{geometry}
+\RequirePackage[parfill]{parskip}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+
+% Text, monospace, and matching mathematics fonts.
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[tt=false,type1=true]{libertine}
+\RequirePackage[varqu]{zi4}
+\RequirePackage{amsmath,amsthm,mathtools}
+\RequirePackage[libertine]{newtxmath}
+\RequirePackage{microtype}
+
+% Standard article title with numbered author affiliations.
+\RequirePackage{authblk}
+
+% Keep the abstract inset, with no first-line indentation.
+\RequirePackage{abstract}
+\setlength{\absparindent}{0pt}
+
+% Author-year citations with a standard BibTeX backend.
+\RequirePackage{natbib}
+\setcitestyle{authoryear,round,citesep={;},aysep={,},yysep={;}}
+
+\endinput

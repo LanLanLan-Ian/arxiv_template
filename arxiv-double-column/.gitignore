@@ -1,0 +1,23 @@
+# LaTeX build output
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+/main.pdf
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+*~
+*.swp
+
+# Keep source figures, including PDFs, under version control.

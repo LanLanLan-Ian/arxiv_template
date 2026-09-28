@@ -1,0 +1,48 @@
+name: Build templates
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'arxiv-single-column/**'
+      - 'arxiv-double-column/**'
+      - '.github/workflows/build.yml'
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Compile both layouts
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - name: Compile the examples
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: |
+            arxiv-single-column/main.tex
+            arxiv-double-column/main.tex
+          work_in_root_file_dir: true
+          continue_on_error: true
+          texlive_version: 2025
+      - name: Upload PDFs
+        uses: actions/upload-artifact@v6
+        with:
+          name: arxiv-template-pdfs
+          path: |
+            arxiv-single-column/main.pdf
+            arxiv-double-column/main.pdf
+          if-no-files-found: error
+      - name: Upload build logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v6
+        with:
+          name: latex-build-logs
+          path: |
+            arxiv-single-column/*.log
+            arxiv-double-column/*.log
+          if-no-files-found: ignore
