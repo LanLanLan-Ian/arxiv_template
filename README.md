@@ -4,10 +4,19 @@ Two LaTeX templates for research preprints: **arXiv Single Column** and
 **arXiv Double Column**. Both use the same Libertine typography, mathematical
 fonts, centered title, and numbered author affiliations.
 
-| Template | Body | Title, authors, and abstract | Download |
-| --- | --- | --- | --- |
-| [arXiv Single Column](arxiv-single-column/) | One column | Full width | [ZIP](downloads/arxiv-single-column.zip) |
-| [arXiv Double Column](arxiv-double-column/) | Two columns | Full width | [ZIP](downloads/arxiv-double-column.zip) |
+| Template | Body | Title, authors, and abstract | Download | Preview |
+| --- | --- | --- | --- | --- |
+| [arXiv Single Column](arxiv-single-column/) | One column | Full width | [ZIP](downloads/arxiv-single-column.zip) | [PDF](previews/arxiv-single-column.pdf) |
+| [arXiv Double Column](arxiv-double-column/) | Two columns | Full width | [ZIP](downloads/arxiv-double-column.zip) | [PDF](previews/arxiv-double-column.pdf) |
+
+## Rendered examples
+
+These PDFs are compiled from the included example manuscripts. Click a first-page
+preview to open the complete PDF, including references and the appendix.
+
+| Single column | Double column |
+| --- | --- |
+| [![Single-column template preview](previews/arxiv-single-column.png)](previews/arxiv-single-column.pdf) | [![Double-column template preview](previews/arxiv-double-column.png)](previews/arxiv-double-column.pdf) |
 
 ## Quick start
 
@@ -55,6 +64,7 @@ The included table uses `tabularx` so it fits either layout without scaling text
 arxiv-single-column/     Standalone single-column project
 arxiv-double-column/     Standalone double-column project
 downloads/              Ready-to-use source archives
+previews/               Compiled example PDFs and first-page images
 .github/workflows/      Automated LaTeX compilation
 LICENSE                 Apache License 2.0
 ```
@@ -76,7 +86,8 @@ pdflatex main.tex
 ```
 
 The downloadable source archives should be regenerated whenever a template is
-changed. They contain the files in the corresponding template folder, with
+changed. Refresh the PDFs and first-page images in `previews/` from the same
+compiled sources so the examples stay in sync. The ZIP archives contain the files in the corresponding template folder, with
 `main.tex` at the archive root and no generated build files.
 
 ## Contributing
